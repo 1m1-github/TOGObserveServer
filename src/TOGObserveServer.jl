@@ -23,6 +23,6 @@ end
 
 time(ω::𝕋) = (x...) -> t(ω)
 type(ω::𝕋) = (x...) -> first(typeof(ω).parameters)
-Base.∩(ω::𝕋) = (x...) -> ∩(x..., ω)
+Base.:∩(ω::𝕋) = (x...) -> ∩(x..., ω)
 
 end

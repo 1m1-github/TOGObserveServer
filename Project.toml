@@ -1,6 +1,6 @@
 name = "TOGObserveServer"
 uuid = "77c91f47-dcfd-4708-a9db-24532122012c"
-version = "4.0.0"
+version = "5.0.0"
 authors = ["1m1 <imi@1m1.io>"]
 
 [deps]
