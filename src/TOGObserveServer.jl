@@ -12,7 +12,7 @@ function sleep()
     schedule(TASK[], InterruptException(), error=true)
     TOGZMQAPIServer.sleep(SOCKET[])
 end
-function awaken(socketlocation, ω)
+function awaken(;socketlocation, ω)
     SOCKET[], TASK[] = TOGZMQAPIServer.awaken(socketlocation, Dict(
         :time => time(ω),
         :T => type(ω),
