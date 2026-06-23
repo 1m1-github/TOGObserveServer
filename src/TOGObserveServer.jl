@@ -3,7 +3,7 @@ module TOGObserveServer
 using ZMQ
 using TOGZMQAPIServer
 using TOGOctahedron: Octahedron
-using TOG: t, ∩
+using TOG: t, ∩, 𝕋
 
 const SOCKET = Ref{Socket}()
 const TASK = Ref{Task}()
@@ -21,8 +21,8 @@ function awaken(;socketlocation, ω)
     ))
 end
 
-time(ω) = (x...) -> t(ω)
-type(ω) = (x...) -> first(typeof(ω).parameters)
-∩(ω) = (x...) -> ∩(x..., ω)
+time(ω::𝕋) = (x...) -> t(ω)
+type(ω::𝕋) = (x...) -> first(typeof(ω).parameters)
+Base.∩(ω::𝕋) = (x...) -> ∩(x..., ω)
 
 end
