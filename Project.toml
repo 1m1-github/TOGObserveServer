@@ -1,0 +1,10 @@
+name = "TOGObserveServer"
+uuid = "77c91f47-dcfd-4708-a9db-24532122012c"
+version = "1.0.0"
+authors = ["1m1 <imi@1m1.io>"]
+
+[deps]
+TOGOctahedron = "63dbb591-2283-4878-9590-a413da56821f"
+TOG = "894673ee-413c-4601-8a2e-415a0e884e29"
+TOGZMQAPIServer = "f3b3c524-0be3-4e51-a4a9-f5c41e69849d"
+ZMQ = "c2297ded-f4af-51ae-bb23-16f91089e4e1"
