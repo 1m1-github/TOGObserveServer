@@ -3,7 +3,8 @@ module TOGObserveServer
 using ZMQ
 using TOGZMQAPIServer
 using TOGOctahedron: Octahedron
-using TOG: t, ∩, 𝕋
+using TOG
+using TOG: t, 𝕋
 
 const SOCKET = Ref{Socket}()
 const TASK = Ref{Task}()
@@ -23,6 +24,19 @@ end
 
 time(ω::𝕋) = (x...) -> t(ω)
 type(ω::𝕋) = (x...) -> first(typeof(ω).parameters)
-Base.:∩(ω::𝕋) = (x...) -> ∩(x..., ω)
+Base.:∩(ω::𝕋) = (ϵ...) -> begin
+@show "Base.:∩(ω::𝕋) ", typeof(ϵ),typeof(ϵ...)
+@show "heeeeee3"
+@show isdefined(TOG,:∩)
+@show "wwwwww"
+@show TOG.∩
+@show "kjdlkdkjl"
+# @show (ϵ...)
+# @show isdefined(:ω)
+@show "ijelkjeklw"
+@show ω
+@show "ytwr"
+TOG.∩(ϵ..., ω)
+end
 
 end
